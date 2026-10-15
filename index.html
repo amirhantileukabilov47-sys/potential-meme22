@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой первый сайт</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #101827, #263b68);
+            color: rgb(224, 1, 1);
+            min-height: 100vh;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 8%;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+            color: #67e8f9;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+        }
+
+        nav a:hover {
+            color: #67e8f9;
+        }
+
+        main {
+            min-height: 75vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        h1 {
+            font-size: clamp(36px, 7vw, 68px);
+            margin-bottom: 20px;
+        }
+
+        h1 span {
+            color: #6cf967;
+        }
+
+        main p {
+            color: #d1d5db;
+            font-size: 18px;
+            max-width: 600px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        button {
+            background: #67e8f9;
+            color: #101827;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.07);
+            background: #11d3e9;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #d10000;
+        }
+
+        @media (max-width: 500px) {
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">MY WEBSITE</div>
+
+        <nav>
+            <a href="#home">Главная</a>
+            <a href="#about">О сайте</a>
+        </nav>
+    </header>
+
+    <main id="home">
+        <h1>Создавай своё <span>будущее</span></h1>
+
+        <p id="about">
+            Добро пожаловать на мой первый сайт!
+            Я изучаю HTML, CSS и JavaScript,
+            чтобы создавать современные веб-сайты.
+        </p>
+
+        <button onclick="showMessage()">
+            Нажми на меня
+        </button>
+    </main>
+
+    <footer>
+        © 2026 Мой первый сайт. Создано с ❤️
+    </footer>
+
+    <script>
+        function showMessage() {
+            alert("Поздравляю! Твой сайт работает 🎉");
+        }
+    </script>
+</body>
+</html>
